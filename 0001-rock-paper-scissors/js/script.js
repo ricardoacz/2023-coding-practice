@@ -8,3 +8,21 @@ class Player {
         this.hand = options[Math.floor(Math.random() * 3)]
     }
 }
+
+// Play the game. Game logic. User inputs their choice and player objects are created.
+function play (choice) {
+    let human = new Player(choice)
+    let computer = new Player("")
+    computer.choice()
+
+    if (human.hand === computer.hand) {
+        return "It's a tie!"
+    } else if (human.hand === 'rock' && computer.hand === 'scissors'
+    || human.hand === 'paper' && computer.hand === 'rock'
+    || human.hand === 'scissors' && computer.hand === 'paper') {
+        return "You win!"
+    } else {
+        return "Computer wins!"
+    }
+    
+}
