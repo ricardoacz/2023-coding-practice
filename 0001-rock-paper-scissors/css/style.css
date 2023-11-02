@@ -18,7 +18,10 @@ body {
     width: 100%;
 } */
 
-
+.text-box1 {
+    display: flex;
+    
+}
 
 .game-box {
     margin: 0 auto;

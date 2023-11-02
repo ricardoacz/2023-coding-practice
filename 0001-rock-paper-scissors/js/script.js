@@ -1,3 +1,9 @@
+// Global variables
+let outcome = ""
+let humanScore = 0
+let computerScore = 0
+let scoreText = ": 0 | Computer: 0"
+
 // Class to create the players. This will be use to for the human player and machine player.
 class Player {
     constructor (hand) {
@@ -16,12 +22,24 @@ function play (choice) {
     computer.choice()
 
     if (human.hand === computer.hand) {
+        outcome = `You picked ${human.hand}, computer picked ${computer.hand}. It's a tie!`
+        updateMessage()
         return "It's a tie!"
     } else if (human.hand === 'rock' && computer.hand === 'scissors'
     || human.hand === 'paper' && computer.hand === 'rock'
     || human.hand === 'scissors' && computer.hand === 'paper') {
+        outcome = `You picked ${human.hand}, computer picked ${computer.hand}. You win!`
+        updateMessage()
+        humanScore++
+        scoreText = `: ${humanScore} | Computer: ${computerScore}`
+        updateScore()
         return "You win!"
     } else {
+        outcome = `You picked ${human.hand}, computer picked ${computer.hand}. Computer wins!`
+        updateMessage()
+        computerScore++
+        scoreText = `: ${humanScore} | Computer: ${computerScore}`
+        updateScore()
         return "Computer wins!"
     }
     
@@ -29,6 +47,8 @@ function play (choice) {
 
 // Html and user-interface stuff
 const userName = document.querySelector("#human-name")
+const outcomeMessage = document.querySelector("#game-outcome")
+const score_text = document.querySelector("#score-text")
 userName.addEventListener("click", inputName)
 
 function inputName () {
@@ -36,4 +56,12 @@ function inputName () {
     if (name) {
         userName.innerText = name
     }
+}
+
+function updateMessage () {
+    outcomeMessage.innerText = outcome
+}
+
+function updateScore() {
+    score_text.innerText = scoreText
 }
