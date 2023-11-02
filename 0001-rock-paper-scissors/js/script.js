@@ -49,7 +49,15 @@ function play (choice) {
 const userName = document.querySelector("#human-name")
 const outcomeMessage = document.querySelector("#game-outcome")
 const score_text = document.querySelector("#score-text")
+const rock_image = document.querySelector("#rock")
+const paper_image = document.querySelector("#paper")
+const scissors_image = document.querySelector("#scissors")
+
+// Event listeners
 userName.addEventListener("click", inputName)
+rock_image.addEventListener('click', () => {play('rock')})
+paper_image.addEventListener('click', () => {play('paper')})
+scissors_image.addEventListener('click', () => {play('scissors')})
 
 function inputName () {
     let name = window.prompt('Please enter your name:')
