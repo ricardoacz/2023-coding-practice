@@ -26,3 +26,14 @@ function play (choice) {
     }
     
 }
+
+// Html and user-interface stuff
+const userName = document.querySelector("#human-name")
+userName.addEventListener("click", inputName)
+
+function inputName () {
+    let name = window.prompt('Please enter your name:')
+    if (name) {
+        userName.innerText = name
+    }
+}
