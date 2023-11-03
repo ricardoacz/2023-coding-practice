@@ -41,3 +41,52 @@ body {
 .tails {
     transform: rotateX(180deg);
 }
+
+/* Flp animation */
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(1080deg)
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(1080deg)
+    }
+}
+
+.stats {
+    display: flex;
+    color: rgb(54, 54, 54);
+    font-weight: 500;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-top: 55px;
+    margin-bottom: 45px;
+}
+
+/* Pseudo selector */
+.stats p:nth-last-child(1) {
+    margin-left: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 150px;
+    padding: 15px 0;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
