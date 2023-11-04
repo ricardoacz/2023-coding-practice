@@ -10,6 +10,16 @@ body {
     background-color: antiquewhite;
 }
 
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
 .container {
     background: white;
     width: 400px;
@@ -49,7 +59,7 @@ body {
         transform: rotateX(0);
     }
     100% {
-        transform: rotateX(1080deg)
+        transform: rotateX(1980deg)
     }
 }
 
@@ -58,7 +68,7 @@ body {
         transform: rotateX(0);
     }
     100% {
-        transform: rotateX(1080deg)
+        transform: rotateX(2160deg)
     }
 }
 
@@ -89,4 +99,19 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#flip-button {
+    background-color: rgb(90, 131, 117);
+    color: white;
+}
+
+#flip-button:disabled {
+    background-color: rgb(150, 150, 150);
+    color: rgb(44, 44, 44);
+}
+
+#reset-button {
+    background-color: rgb(56, 56, 56);
+    color: white;
 }
