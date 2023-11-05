@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+.container {
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: 0 10px 30px rgb(51, 51, 51, 0.2);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.content1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+     /* Set the font size to 16px */
+  font-size: 16px;
+  /* Set the line height to 1.5 to create some space between the lines */
+  line-height: 1.5;
+  /* Set the word-break to break-word to prevent the text from overflowing the container */
+  word-break: break-word;
+}
+
+.btn-container {
+    width: 100px;
+    height: 100px;
+    background-color: azure;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: 0 10px 30px rgb(51, 51, 51, 0.2);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#btn {
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: aquamarine;
+}
+
+#btn:active {
+    background-color: rgb(87, 175, 146);
+}
