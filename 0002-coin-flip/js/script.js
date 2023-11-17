@@ -56,8 +56,8 @@ console.log('hello world')
 
 function message() {
     if (heads > tails && heads === 2) {
-        document.querySelector("#message").innerText = `Ricardo will go to wushu on Sunday, making the comeback of a lifetime lol`
+        document.querySelector("#message").innerText = `Yes`
     } else if (tails > heads && tails === 2) {
-        document.querySelector("#message").innerText = `You know? This is dumb, just go to wushu on Sunday!`
+        document.querySelector("#message").innerText = `No, but you should reconsider lol`
     }
 }
